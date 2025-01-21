@@ -4,84 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .description {
-            width: 50%;
-            text-align: left;
-            padding: 20px;
-        }
-        .portrait {
-            width: 40%;
-            text-align: right;
-            padding: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 4px 4px 10px rgba(0, 240, 240, 0.3);
-}
-
-
-    </style>
-
+    <link rel="stylesheet" href="style1.css">
 
 </head>
 <body>
     <div class="container">
         <button>Home</button>
-        <button>Portfolio</button>
-        <button>Resume</button>
-        <button>Service</button>
-        <button>AI Page</button>
+        <button onclick="goToPortfolio()">Portfolio</button>
+        <button onclick="goToResume()">Resume</button>
+        <button onclick="goToService()">Service</button>
+        <button onclick="goToAI()">AI Page</button>
         <button>Change Layout</button>
     </div>
     <div class="content">
         <div class="description">
-            <h2>Hello, welcome to my personal website! </h2>
-            <p> My name is Junyi, and I am a junior majoring in Computer Engineering!</p>
+            <h2>Hello!!! Welcome to my website for 331! </h2>
+            <p>My name is Junyi Wu, and I am a junior majoring in Computer Engineering 💻 with a minor in Mathematics! 😼</p>
+            <div class="description-box">
+                <p>I am currently taking the following courses: </p>
+                <ul>
+                    <li>CSCE 331 - Foundation in Software Engineering 💻</li>
+                    <li>CSCE 469 - Advanced Computer Architecture 💻</li>
+                    <li>ECEN 749 - Microprocessor Systems Design 💻</li>
+                    <li>MATH 414 - Fourier Wavelets 💻</li>
+                </ul>
+            </div>
+            <div class="description-box">
+                <p>I chose this major because when I was little I was passionate about electronics. 
+                    After taking few ECEN coureses, I developed a passion for VLSI systems design. 
+                    In my 454 classes, working with Cadence Virtuoso Tool, I  
+                </p>
+            </div>
         </div>
         <div class="portrait">
-            <img src="pictures/selfie_2.jpg" alt="Portrait">
+            <img src="pictures/selfie_3.jpg" alt="Portrait">
         </div>
     </div>
+    <script>
+        function goToResume() {
+            window.location.href = 'qualifications.html';
+        }
+        function goToPortfolio() {
+            window.location.href = 'portfolio.html';
+        }
+        function goToService() {
+            window.location.href = 'service.html';
+        }
+        function goToAI() {
+            window.location.href = 'genai.html';
+        }
+    </script>
 </body>
 </html>

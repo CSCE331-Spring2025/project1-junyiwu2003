@@ -5,79 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="style1.css">
-
 </head>
 <body>
     <div class="container">
-        <button class="active">Home</button>
-        <button onclick="goToPortfolio()">Portfolio</button>
-        <button onclick="goToResume()">Resume</button>
-        <button onclick="goToService()">Service</button>
-        <button onclick="goToAI()">GPT Page</button>
-        <button>Change Layout</button>
+        <a href="index.html" class="button">Home</button>
+        <a href="portfolio.html" class="button">Portfolio</a>
+        <a href="qualifications.html" class="button">Resume</a>
+        <a href="service.html" class="button">Service</a>
+        <a href="genai.html" class="button">GPT Page</a>
+        <a class="button">Change Layout</a>
     </div>
     <div class="content">
         <div class="description">
-            <h1>Hello!!! Welcome to my website for CSCE-331! 😁</h1>
+            <h1>Hello!!! Welcome to my website for CSCE-331!</h1>
             <p><h4>
                 My name is Junyi, and I am a junior majoring in Computer Engineering 💻 
                 with a minor in Mathematics🧮! And I am studying at Texas A&M in College Station 😼
             </h4></p>
-            <hr style="border: 2px solid rgb(0, 240, 240); margin: 10px;">
-            <div class="description-box">
+            <hr style="border: none; height: 2px; background-color: rgb(0, 240, 240);">
+            <div class="class-box">
                 <p>I am currently taking the following courses this semester (Spring '25): </p>
                 <ul>
                     <li><b>CSCE 331 - Foundation in Software Engineering</b>💻.
                         A class that focuses on large scale software development, such as full stack web development.
                     </li>
                     <li><b>CSCE 469 - Advanced Computer Architecture</b>💻.
-                        The sequel to my Computer Architecture class that focuses on memory designs, piepine techniques, and parallel structures!
+                        The sequel to my Computer Architecture class that focuses on memory designs, pipeline techniques, and parallel structures!
                     </li>
                     <li><b>ECEN 749 - Microprocessor Systems Design</b>💻.
                         A class that focuses on microprocessors, covering topics 
                         such as 16/32-bit computer hardware, serial and parallel I/O interfacing, and memory circuits designed for no-wait-state operation.
                     </li>
                     <li><b>MATH 414 - Fourier Series and Wavelets</b>💻.
-                        A class that focuses on fourier transform with applications in data compressions and signal processing.
+                        A class that focuses on Fourier transform with applications in data compressions and signal processing.
                     </li>
                 </ul>
             </div>
-            <hr style="border: 2px solid rgb(0, 240, 240); margin: 10px;">
-            <div class="description-box">
-                <p>I chose this major because when I was little I was passionate about electronics. As you can see 
-                from the courses above, many are about digital electronics and the architecture design align with my interests.
-                These courses will provide me with a strong fundamental and will be essential for what I want to do in the near future.
-                </p>
+            <hr style="border: none; height: 2px; background-color: rgb(0, 240, 240);">
+            <div class="text-box">
+                <div class="text">
+                    <h3>Career Aspirations: </h3>
+                    <p>I chose this major because I have been passionate about electronics since childhood. The courses I've taken and currently taking
+                        align perfectly with my interests and future career aspirations. 
+                        After graduation, I plan to pursue a Master's degree, concentrating on computer architecture, hardware verification, and VLSI design. 
+                        These areas are critical for building a strong foundation in Digital VLSI and Processor Architecture and will prepare me for a career in the semiconductor industry.
+                    </p>
+                </div>
+                <div class="chip-picture">
+                    <img src="pictures/vlsi_1.jpg" alt="chips">
+                </div>
+                
             </div>
-            <hr style="border: 2px solid rgb(0, 240, 240); margin: 10px;">
-            <div class="description-box">
-                <h3> Hobbies: </h3>
-                <p>
-                <b>Jogging/Running</b> 
-                <b>Hiking</b>
-                </p>
+
+            <hr style="border: none; height: 2px; background-color: rgb(0, 240, 240);">
+            <div class="text-box">
+                <div class="text">
+                    <h3> Hobbies: </h3>
+                    <p> Aside from spending time in my room coding and learning about computers, I enjoy outdoor activities like walking in the park or hiking on trails. 
+                        These activities not only help me build stamina and strength but also give me a chance to breathe fresh air and improve my mental health. 
+                        Being outdoors creates a calming atmosphere that helps me relax, reduces stress, and promotes a sense of peace and balance.
+                    </p>
+                    <p> I also enjoy driving, as it provides a calming effect similar to walking. Moreover, driving allows me to clear my mind and focus on the road, offering a sense of freedom and an escape from negative thoughts. 
+                        The scenic views I encounter while driving, combined with the solitude it provides, bring me a deep sense of peace and tranquility.
+                    </p>
+                </div>
+                <div class="park-picture">
+                    <img src="pictures/park_2.jpg" alt="park">
+                </div>
             </div>
         </div>
-        <div class="selfie" >
+        <div class="selfie">
             <img src="pictures/selfie_3.jpg" alt="Me and my dog">
-            <div class="caption"> 
-                This is me and my dog in winter of 2022. 
-            </div>
         </div>
     </div>
-    <script>
-        function goToResume() {
-            window.location.href = 'qualifications.html';
-        }
-        function goToPortfolio() {
-            window.location.href = 'portfolio.html';
-        }
-        function goToService() {
-            window.location.href = 'service.html';
-        }
-        function goToAI() {
-            window.location.href = 'genai.html';
-        }
-    </script>
+    
+    <footer class="footer">
+        <a href="https://open.spotify.com/" target="_blank" class="footer-link">
+            <img src="pictures/spotify.png" alt="Spotify" class="footer-icon"> Spotify
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" class="footer-link">
+            <img src="pictures/linkedin.png" alt="LinkedIn" class="footer-icon"> LinkedIn
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="footer-link">
+            <img src="pictures/github.png" alt="Instagram" class="footer-icon"> Instagram
+        </a>
+    </footer>
+    
 </body>
 </html>

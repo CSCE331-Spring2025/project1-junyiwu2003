@@ -1,79 +1,146 @@
 body {
     background: linear-gradient(to right, #bbffff, #ffffff);
-    font-family: Arial, sans-serif;
+    font-family: free, monospace;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .container {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
 }
+
 .content {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     margin-top: 20px;
+    gap: 20px;
 }
+
 .description {
-    width: 85%;
+    flex: 1 1 60%;
+    max-width: 700px;
     text-align: left;
 }
-.description-box {
-    padding: 10px;
+
+.class-box {
+    padding: 1rem;
     background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    width: 100%; 
 }
 
-.selfie {
-    width: 30%;
-    text-align: right;
+.text-box {
+    display: flex;
+    align-items: left; 
+    justify-content: space-between; 
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    gap: 20px; 
+    width: 160%;
+    
 }
-.selfie img {
-    margin-top: 50px;
-    max-width: 80%;
-    height: auto;
+
+.text {
+    font-size: 18px;
+}
+
+.chip-picture img {
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
-
-.selfie .caption {
-    text-align: center;
-    padding: 10px;
-    background-color: #ffffff; 
-    border: 1px solid #ccc; 
-    border-radius: 10px; 
-    margin-top: 5px;
-    margin-left: 60px;
-    width: 70%; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+.park-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.park-picture img {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    width: 500px;
 }
 
-button {
+.selfie { 
+    flex: 1 1 35%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.selfie img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    margin-top: 1rem;
+    outline: 15px solid #ccc;
+}
+
+
+.button {
+    display: inline-block; 
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid #ccc;
     background-color: #ffffff;
+    color: #000; 
+    text-decoration: none; 
+    text-align: center; 
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s; 
 }
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 4px 4px 10px rgba(0, 240, 240, 0.3);
+
+.button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 4px 4px 10px rgba(0, 240, 240, 0.3); 
 }
-button:active {
-    background-color: rgb(0, 240, 240);
-    color: white;
+
+.button:active {
+    background-color: rgb(0, 240, 240); 
+    color: white; 
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-link {
+    margin: 0 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: rgb(0, 240, 240);
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
 }
 
 
@@ -108,3 +175,4 @@ button:active {
     grid-column: 2; 
     grid-row: 2; 
 }
+

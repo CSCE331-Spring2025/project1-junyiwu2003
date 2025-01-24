@@ -3,31 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Page</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Aespa - MAMA Awards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('pictures/aespa_whiplash.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container .button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            display: inline-block;
+        }
+        .container .button:hover {
+            background-color: rgba(68, 68, 68, 0.8);
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="button">Home</button>
-        <a href="portfolio.html" class="button">Portfolio</a>
-        <a href="qualifications.html" class="button">Resume</a>
-        <a href="service.html" class="button">Service</a>
-        <a href="genai.html" class="button">GPT Page</a>
-        <a class="button">Change Layout</a>
+
+<div class="container">
+    <a href="index.html" class="button">Home</a>
+    <a href="portfolio.html" class="button">Portfolio</a>
+    <a href="qualifications.html" class="button">Resume</a>
+    <a href="service.html" class="button">Service</a>
+    <a href="genai.html" class="button">GPT Page</a>
+    <a class="button">Change Layout</a>
+</div>
+
+<header>
+    <h1>Aespa at the MAMA Awards</h1>
+</header>
+
+<main>
+    <div class="image-container">
+        <img src="pictures/aespa_mama2.jpeg" alt="Aespa at MAMA Awards">
     </div>
-    <script>
-        function goHome() {
-            window.location.href = 'index.html';
-        }
-        function goToResume() {
-            window.location.href = 'qualifications.html';
-        }
-        function goToPortfolio() {
-            window.location.href = 'portfolio.html';
-        }
-        function goToService() {
-            window.location.href = 'service.html';
-        }
-    </script>
+
+    <section>
+        <h2>About Aespa</h2>
+        <p>Aespa is a South Korean girl group formed by SM Entertainment. Known for their unique concept that blends virtual and real members, the group has gained massive popularity worldwide. They debuted on November 17, 2020, with their single "Black Mamba."</p>
+    </section>
+
+    <section>
+        <h2>Members</h2>
+        <p>Aespa consists of four talented members:</p>
+        <ul>
+            <li><strong>Karina:</strong> The leader, known for her captivating visuals and dancing skills.</li>
+            <li><strong>Giselle:</strong> The main rapper, recognized for her multilingual abilities and charisma.</li>
+            <li><strong>Winter:</strong> The lead vocalist, celebrated for her sweet voice and strong stage presence.</li>
+            <li><strong>Ningning:</strong> The maknae (youngest member) and main vocalist, admired for her powerful vocals and charming personality.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>History</h2>
+        <p>Aespa's name is derived from the combination of "ae" (Avatar and Experience) and "aspect," symbolizing the group's innovative concept of integrating virtual avatars with real-life members. Their debut single "Black Mamba" quickly gained traction, breaking records for a debut music video on YouTube. The group continued their success with hits like "Next Level," "Savage," and "Girls."</p>
+        <p>In addition to their music, Aespa has been praised for their futuristic and bold concepts, earning them a reputation as trendsetters in the K-pop industry.</p>
+    </section>
+
+    <section>
+        <h2>Fun Facts</h2>
+        <ul>
+            <li>Aespa was the first K-pop group to perform at the "Macy's Thanksgiving Day Parade" in 2021.</li>
+            <li>Their song "Next Level" became a cultural phenomenon in South Korea, widely used in commercials and TV shows.</li>
+            <li>Aespa has their own virtual avatars, known as "ae-members," which interact with the group in music videos and other media.</li>
+            <li>The group has won multiple "Rookie of the Year" awards in their debut year, showcasing their immediate impact on the industry.</li>
+            <li>They are global ambassadors for luxury brands like Givenchy and Chopard.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>MAMA Awards</h2>
+        <p>The MAMA Awards (Mnet Asian Music Awards) is one of the most prestigious music award shows in Asia. Aespa's performance and recognition at the MAMA Awards highlight their influence and achievements in the music industry. Their innovative style and captivating performances have won them numerous awards and global acclaim.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Aespa Fan Page</p>
+</footer>
+
 </body>
 </html>

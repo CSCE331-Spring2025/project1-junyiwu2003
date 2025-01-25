@@ -15,19 +15,58 @@
         <a href="genai.html" class="button">GPT Page</a>
         <a class="button">Change Layout</a>
     </div>
-    <script>
-        function goHome() {
-            window.location.href = 'index.html';
-        }
-        function goToResume() {
-            window.location.href = 'qualifications.html';
-        }
-        function goToService() {
-            window.location.href = 'service.html';
-        }
-        function goToAI() {
-            window.location.href = 'genai.html';
-        }
-    </script>
+
+    <header>
+        <h1>Projects 👾</h1>
+    </header>
+
+    <div class="rows">
+        <div class="row">
+            <h2>8 Bit Pipeline Adder</h2>
+            <p class="text">In my ECEN 454 class, I designed an 8-bit pipelined adder as part of my labwork. Using Cadence Virtuoso, 
+                I came up with transistor-level schematics and layouts for NOT, NAND, and XOR gates to build the adders.
+                I also designed registers using D flip-flops and implemented a buffered H-tree clock distribution network 
+                to ensure minimal clock skew across the sequential elements.
+                Additionally, I leveraged Spectre simulation software to optimize performance by reducing parasitic capacitance, 
+                which involved calibrating the sizes of each transistor in each design, and perform post layout simulations to 
+                measure power consumption and progration delay.
+                After Calibration, I integrated the calibrated adders and registers to construct the complete pipelined adder.
+                Finally, I also performed post-layout simulations to validate functionality by running through tests.
+            </p>
+            <div class="adder-picture">
+                <img src="pictures/adder.jpg" alt="adder">
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>6502 Emulator</h2>
+            <p class="text">
+                I emulated the 6502 Emulator which used CISC aritecture. The main focus of this project was to expand my understanding of 
+                lower level programming. The emulator was written in C++, and it fully repicates the 6502 instruction sets including 
+                all the addressing modes. The emulator also correctly handles the execute, decode, and fetch cycle with the correct number of 
+                execution cycles for each instructions. 
+                The emulator supports various types of instructions, including arithmetic operations, jumps, stack manipulation, 
+                and memory access, reflecting the full functionality of the original processor.Instructions are also validated using written testbench codes to ensure each instruction
+                executes perfectly. 
+            </p>
+            <div class="m6502-picture">
+                <img src="pictures/6502.jpg" alt="6502">
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Nand2Tetris</h2>
+            <p class="text">
+                During the last summer, I completed the Nand2Tetris part one course. In the course, I built a 16-bit CPU from the ground up using HDL.
+                I started with the fundemental logic gates and progressed to more complex components like ALUs, registers, and program counter.
+                I implemented modules for arithmetic operations, control flow, and memory access, eventually integrating them into a fully functional CPU.
+                The CPU was tested by running high-level programs written in the Hack assembly language, ensuring accurate fetch, decode, and execute cycles.  
+            </p>
+            <div class="nand2-picture">
+                <img src="pictures/nand2.png" alt="nand">
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

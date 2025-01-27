@@ -4,78 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aespa - MAMA Awards</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Root Variables for easy color/theme changes */
+        :root {
+            --bg-overlay-color: rgba(0, 0, 0, 0.7);  /* General overlay color */
+            --accent-color: #FFD700;                 /* Golden accent color */
+            --highlight-color: #F72585;              /* A bright pink/purple pop color */
+            --text-color: #FFFFFF;                   /* Base text color */
+            --header-bg-color: rgba(0, 0, 0, 0.8);   /* Header and footer background color */
+            --button-bg-color: rgba(0, 0, 0, 0.8);   /* Button background color */
+            --button-hover-color: rgba(68, 68, 68, 0.8);
+            --timeline-bg-color: rgba(0, 0, 0, 0.7);
+            --timeline-hover-color: rgba(68, 68, 68, 0.9);
+            --box-shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Global Reset/Style */
+        * {
             margin: 0;
             padding: 0;
-            background: url('pictures/aespa_whiplash.png') no-repeat center center fixed;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+            ), url('pictures/aespa_whiplash.png') no-repeat center center fixed;
             background-size: cover;
-            color: #fff;
+            color: var(--text-color);
         }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+
+        /* Navigation Container */
         .container {
             text-align: center;
-            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--header-bg-color);
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
         .container .button {
             margin: 5px;
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
+            padding: 12px 24px;
+            background-color: var(--button-bg-color);
+            color: var(--text-color);
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 50px;
             font-size: 1rem;
             display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .container .button:hover {
-            background-color: rgba(68, 68, 68, 0.8);
+            background-color: var(--button-hover-color);
+            transform: translateY(-2px);
         }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--header-bg-color);
+            box-shadow: 0 4px 8px var(--box-shadow-color);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 5px #000000;
+        }
+
+        /* Main Content Area */
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background: var(--bg-overlay-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px var(--box-shadow-color);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            text-shadow: 1px 1px 3px #000000;
+            position: relative;
+        }
+        h2:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--highlight-color);
+            margin-top: 8px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Image Container */
         .image-container {
             text-align: center;
             margin-bottom: 20px;
         }
         .image-container img {
-            max-width: 100%;
+            max-width: 80%;
             border-radius: 8px;
+            border: 2px solid var(--accent-color);
+            transition: transform 0.3s ease;
         }
-        section {
-            margin-bottom: 20px;
+        .image-container img:hover {
+            transform: scale(1.02);
         }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
+            padding: 20px;
+            background-color: var(--header-bg-color);
+            color: var(--text-color);
+            box-shadow: 0 -4px 8px var(--box-shadow-color);
+        }
+        footer p {
+            margin: 5px 0;
         }
         footer a {
-            color: #1DA1F2;
+            color: var(--highlight-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Timeline */
+        .timeline-container {
+            position: relative;
+            margin: 20px 0;
+            padding-left: 30px;
+            border-left: 3px solid var(--accent-color);
+        }
+        .timeline-event {
+            position: relative;
+            margin-bottom: 40px;
+            padding: 20px 20px 20px 60px;
+            background: var(--timeline-bg-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px var(--box-shadow-color);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .timeline-event:hover {
+            background: var(--timeline-hover-color);
+            transform: scale(1.02);
+        }
+        .timeline-dot {
+            position: absolute;
+            top: 20px;
+            left: -17px;
+            width: 24px;
+            height: 24px;
+            background: var(--accent-color);
+            border: 3px solid var(--highlight-color);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--highlight-color);
+        }
+        .timeline-event h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+        .timeline-event p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .container .button {
+                margin: 5px 0;
+            }
+            .image-container img {
+                max-width: 100%;
+            }
+            section {
+                margin-bottom: 30px;
+            }
         }
     </style>
 </head>
 <body>
 
+<!-- Navigation -->
 <div class="container">
     <a href="index.html" class="button">Home</a>
     <a href="portfolio.html" class="button">Portfolio</a>
@@ -85,10 +231,12 @@
     <a class="button">Change Layout</a>
 </div>
 
+<!-- Header -->
 <header>
     <h1>Aespa at the MAMA Awards</h1>
 </header>
 
+<!-- Main Content -->
 <main>
     <div class="image-container">
         <img src="pictures/aespa_mama2.jpeg" alt="Aespa at MAMA Awards">
@@ -119,7 +267,7 @@
     <section>
         <h2>Fun Facts</h2>
         <ul>
-            <li>Aespa was the first K-pop group to perform at the "Macy's Thanksgiving Day Parade" in 2021.</li>
+            <li>Aespa was the first K-pop group to perform at the Macy's Thanksgiving Day Parade in 2021.</li>
             <li>Their song "Next Level" became a cultural phenomenon in South Korea, widely used in commercials and TV shows.</li>
             <li>Aespa has their own virtual avatars, known as "ae-members," which interact with the group in music videos and other media.</li>
             <li>The group has won multiple "Rookie of the Year" awards in their debut year, showcasing their immediate impact on the industry.</li>
@@ -147,8 +295,46 @@
         <h2>MAMA Awards</h2>
         <p>The MAMA Awards (Mnet Asian Music Awards) is one of the most prestigious music award shows in Asia. Aespa's performance and recognition at the MAMA Awards highlight their influence and achievements in the music industry. Their innovative style and captivating performances have won them numerous awards and global acclaim.</p>
     </section>
+
+    <!-- Timeline -->
+    <section>
+        <h2 style="text-align: center; margin-bottom: 20px;">Timeline of Aespa's Albums and EPs</h2>
+        <div class="timeline-container">
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <h3>October 5, 2021: Savage (EP)</h3>
+                <p>Aespa's debut extended play, <strong>Savage</strong>, features the lead single of the same name. The EP showcases their unique blend of pop and electronic music.</p>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <h3>July 8, 2022: Girls (EP)</h3>
+                <p>Their second EP, <strong>Girls</strong>, includes tracks like "Girls" and "Illusion," further establishing their presence in the K-pop industry.</p>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <h3>May 8, 2023: My World (EP)</h3>
+                <p>The third EP, <strong>My World</strong>, features songs such as "Spicy" and "Welcome to My World," highlighting their evolving musical style.</p>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <h3>May 27, 2024: Armageddon (Studio Album)</h3>
+                <p>Aespa's first full-length studio album, <strong>Armageddon</strong>, includes the lead singles "Supernova" and "Armageddon," marking a significant milestone in their discography.</p>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <h3>October 9, 2024: Synk: Parallel Line (Single Album)</h3>
+                <p>This digital single album, <strong>Synk: Parallel Line</strong>, features solo tracks from each member, showcasing their individual talents.</p>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <h3>October 21, 2024: Whiplash (EP)</h3>
+                <p>The fifth EP, <strong>Whiplash</strong>, includes the title track of the same name, further demonstrating their versatility and growth as artists.</p>
+            </div>
+        </div>
+    </section>
 </main>
 
+<!-- Footer -->
 <footer>
     <p>&copy; 2024 Aespa Fan Page</p>
     <p>Follow Aespa on Instagram: 

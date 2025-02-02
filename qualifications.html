@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Page</title>
-    <link rel="stylesheet" href="style1.css">
+    <link id="mainStyleSheet" rel="stylesheet" href="style1.css">
 </head>
 <body>
     <div class="container">
@@ -13,7 +13,7 @@
         <a href="qualifications.html" class="button">Resume</a>
         <a href="service.html" class="button">Service</a>
         <a href="genai.html" class="button">GPT Page</a>
-        <a class="button">Change Layout</a>
+        <button onclick="toggleStyle()" class="button">Change Style</button>
     </div>
     <div class="resume-page">
         <div class="resume">
@@ -63,4 +63,25 @@
         </a>
     </footer>
 </body>
+<script>
+    function toggleStyle() {
+        const styleElement = document.getElementById("mainStyleSheet");
+        const currStyle = styleElement.getAttribute("href");
+        const newStyle = (currStyle === "style1.css") ? "style2.css" : "style1.css";
+        styleElement.setAttribute("href", newStyle);
+
+        localStorage.setItem("selStyle", newStyle);
+}
+
+window.onload = function() {
+    const savedStyle = localStorage.getItem("selStyle");
+    
+    const styleElement = document.getElementById("mainStyleSheet");
+
+    if (savedStyle) {
+        styleElement.setAttribute("href", savedStyle);
+    }
+};
+
+</script>
 </html>

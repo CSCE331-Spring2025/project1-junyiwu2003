@@ -49,8 +49,7 @@ body {
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     gap: 20px; 
-    width: 160%;
-    
+    width: 160%; 
 }
 
 .text {
@@ -114,6 +113,7 @@ body {
 }
 
 .footer {
+    position: fixed;
     margin-top: 20px;
     padding: 10px;
     background-color: #ffffff;

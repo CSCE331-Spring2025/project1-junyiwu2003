@@ -293,7 +293,6 @@ body {
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-/* Image adjustments inside skill-box */
 .skill-box img {
     width: 100%;
     max-width: 300px;
